@@ -14,12 +14,17 @@
       scroll-behavior: smooth;
     }
     .carousel-button {
-      background: rgba(255, 255, 255, 0.3);
-      transition: background 0.2s;
-    }
-    .carousel-button:hover {
-      background: rgba(255, 255, 255, 0.45);
-    }
+	  background: rgba(255, 255, 255, 0.3);
+	  transition: background 0.2s;
+	  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+	}
+	.carousel-button:hover {
+	  background: rgba(255, 255, 255, 0.45);
+	  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+	}
+	.carousel-dot {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+	}
   </style>
 </head>
 <body id="top" class="bg-gray-50 text-gray-900">
@@ -126,10 +131,10 @@
                 <img src="img/cfo3.png" alt="CFO Council 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
                 <img src="img/cfo4.png" alt="CFO Council 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
               </div>
-              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('cfo', -1)">
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-600 font-bold" onclick="navigateCarousel('cfo', -1)">
                 ‹
               </button>
-              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('cfo', 1)">
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-600 font-bold" onclick="navigateCarousel('cfo', 1)">
                 ›
               </button>
               <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
