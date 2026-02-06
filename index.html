@@ -13,6 +13,13 @@
     html {
       scroll-behavior: smooth;
     }
+    .carousel-button {
+      background: rgba(255, 255, 255, 0.3);
+      transition: background 0.2s;
+    }
+    .carousel-button:hover {
+      background: rgba(255, 255, 255, 0.45);
+    }
   </style>
 </head>
 <body id="top" class="bg-gray-50 text-gray-900">
@@ -60,129 +67,378 @@
         Projects
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- PROJECT CARD 1 -->
+        <!-- PROJECT CARD 1 - Truck Stop N' Shop -->
         <div class="border rounded-lg p-6 bg-gray-50">
-          <h3 class="text-xl font-bold mb-2">
-            Truck Stop N' Shop
-          </h3>
-          <p class="mb-4">
-            Brief description of the project, what problem it solves,
-            and what technology you used.
-          </p>
-          <a href="#" class="font-bold hover:underline">
-            View Project →
-          </a>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Truck Stop N' Shop
+              </h3>
+              <p class="mb-4">
+                Brief description of the project, what problem it solves,
+                and what technology you used.
+              </p>
+              <a href="#" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-48 relative group">
+              <div class="carousel" data-carousel="truckstop">
+                <img src="truckstop1.png" alt="Truck Stop 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="truckstop2.png" alt="Truck Stop 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="truckstop3.png" alt="Truck Stop 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="truckstop4.png" alt="Truck Stop 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('truckstop', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('truckstop', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="truckstop" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="truckstop" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="truckstop" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="truckstop" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- PROJECT CARD 2 -->
+
+        <!-- PROJECT CARD 2 - Global CFO Council -->
         <div class="border rounded-lg p-6 bg-gray-50">
-          <h3 class="text-xl font-bold mb-2">
-            Global CFO Council
-          </h3>
-          <p class="mb-4">
-            Another project description goes here.
-          </p>
-          <a href="https://www.globalcfocouncil.com" class="font-bold hover:underline">
-            View Project →
-          </a>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Global CFO Council
+              </h3>
+              <p class="mb-4">
+                Another project description goes here.
+              </p>
+              <a href="https://www.globalcfocouncil.com" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-48 relative group">
+              <div class="carousel" data-carousel="cfo">
+                <img src="cfo1.png" alt="CFO Council 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="cfo2.png" alt="CFO Council 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="cfo3.png" alt="CFO Council 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="cfo4.png" alt="CFO Council 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('cfo', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('cfo', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="cfo" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="cfo" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="cfo" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="cfo" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
         </div>
-		<!-- PROJECT CARD 3 -->
+
+        <!-- PROJECT CARD 3 - Trading Card System App -->
         <div class="border rounded-lg p-6 bg-gray-50">
-          <h3 class="text-xl font-bold mb-2">
-            Trading Card System App
-          </h3>
-          <p class="mb-4">
-            Another project description goes here.
-          </p>
-          <a href="https://www.youtube.com/watch?v=348Ev9fRpDw" class="font-bold hover:underline">
-            View Project →
-          </a>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Trading Card System App
+              </h3>
+              <p class="mb-4">
+                Another project description goes here.
+              </p>
+              <a href="https://www.youtube.com/watch?v=348Ev9fRpDw" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-48 relative group">
+              <div class="carousel" data-carousel="trading">
+                <img src="trading1.png" alt="Trading Card 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="trading2.png" alt="Trading Card 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="trading3.png" alt="Trading Card 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="trading4.png" alt="Trading Card 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('trading', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('trading', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
         </div>
-		<!-- PROJECT CARD 4 -->
+
+        <!-- PROJECT CARD 4 - AI Language Learning App -->
         <div class="border rounded-lg p-6 bg-gray-50">
-          <h3 class="text-xl font-bold mb-2">
-            AI Language Learning App
-          </h3>
-          <p class="mb-4">
-            Another project description goes here.
-          </p>
-          <a href="#" class="font-bold hover:underline">
-            View Project →
-          </a>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                AI Language Learning App
+              </h3>
+              <p class="mb-4">
+                Another project description goes here.
+              </p>
+              <a href="#" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-48 relative group">
+              <div class="carousel" data-carousel="language">
+                <img src="language1.png" alt="Language App 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="language2.png" alt="Language App 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="language3.png" alt="Language App 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="language4.png" alt="Language App 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('language', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('language', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- PROJECT CARD 5 -->
+
+        <!-- PROJECT CARD 5 - It's Smoothie Time VR -->
         <div class="border rounded-lg p-6 bg-gray-50">
-          <h3 class="text-xl font-bold mb-2">
-            It's Smoothie Time VR
-          </h3>
-          <p class="mb-4">
-            Brief description of the project, what problem it solves,
-            and what technology you used.
-          </p>
-          <a href="https://vinadium.itch.io/its-smoothie-time" class="font-bold hover:underline">
-            View Project →
-          </a>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                It's Smoothie Time VR
+              </h3>
+              <p class="mb-4">
+                Brief description of the project, what problem it solves,
+                and what technology you used.
+              </p>
+              <a href="https://vinadium.itch.io/its-smoothie-time" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-48 relative group">
+              <div class="carousel" data-carousel="smoothie">
+                <img src="smoothie1.png" alt="Smoothie Time 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="smoothie2.png" alt="Smoothie Time 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="smoothie3.png" alt="Smoothie Time 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="smoothie4.png" alt="Smoothie Time 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('smoothie', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('smoothie', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- PROJECT CARD 6 -->
+
+        <!-- PROJECT CARD 6 - Snowscapades VR -->
         <div class="border rounded-lg p-6 bg-gray-50">
-          <h3 class="text-xl font-bold mb-2">
-            Snowscapades VR
-          </h3>
-          <p class="mb-4">
-            Another project description goes here.
-          </p>
-          <a href="#" class="font-bold hover:underline">
-            View Project →
-          </a>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Snowscapades VR
+              </h3>
+              <p class="mb-4">
+                Another project description goes here.
+              </p>
+              <a href="#" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-48 relative group">
+              <div class="carousel" data-carousel="snow">
+                <img src="snow1.png" alt="Snowscapades 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="snow2.png" alt="Snowscapades 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="snow3.png" alt="Snowscapades 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="snow4.png" alt="Snowscapades 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('snow', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('snow', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- PROJECT CARD 7 -->
+
+        <!-- PROJECT CARD 7 - Shadow Knight -->
         <div class="border rounded-lg p-6 bg-gray-50">
-          <h3 class="text-xl font-bold mb-2">
-            Shadow Knight
-          </h3>
-          <p class="mb-4">
-            Brief description of the project, what problem it solves,
-            and what technology you used.
-          </p>
-          <a href="https://vinadium.itch.io/shadow-knight" class="font-bold hover:underline">
-            View Project →
-          </a>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Shadow Knight
+              </h3>
+              <p class="mb-4">
+                Brief description of the project, what problem it solves,
+                and what technology you used.
+              </p>
+              <a href="https://vinadium.itch.io/shadow-knight" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-48 relative group">
+              <div class="carousel" data-carousel="shadow">
+                <img src="shadow1.png" alt="Shadow Knight 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="shadow2.png" alt="Shadow Knight 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="shadow3.png" alt="Shadow Knight 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="shadow4.png" alt="Shadow Knight 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('shadow', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('shadow', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="shadow" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="shadow" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="shadow" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="shadow" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- PROJECT CARD 8 -->
+
+        <!-- PROJECT CARD 8 - Super Screeny -->
         <div class="border rounded-lg p-6 bg-gray-50">
-          <h3 class="text-xl font-bold mb-2">
-            Super Screeny
-          </h3>
-          <p class="mb-4">
-            Another project description goes here.
-          </p>
-          <a href="#" class="font-bold hover:underline">
-            View Project →
-          </a>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Super Screeny
+              </h3>
+              <p class="mb-4">
+                Another project description goes here.
+              </p>
+              <a href="https://drive.google.com/file/d/1eHk3eGpnMNrDtiE3nqhMuTlcOWUcaiP-/view?usp=sharing" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-48 relative group">
+              <div class="carousel" data-carousel="screeny">
+                <img src="screeny1.png" alt="Super Screeny 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="screeny2.png" alt="Super Screeny 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="screeny3.png" alt="Super Screeny 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="screeny4.png" alt="Super Screeny 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('screeny', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('screeny', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="screeny" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="screeny" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="screeny" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="screeny" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- PROJECT CARD 9 -->
+
+        <!-- PROJECT CARD 9 - Astro Blast -->
         <div class="border rounded-lg p-6 bg-gray-50">
-          <h3 class="text-xl font-bold mb-2">
-            Astro Blast
-          </h3>
-          <p class="mb-4">
-            Brief description of the project, what problem it solves,
-            and what technology you used.
-          </p>
-          <a href="https://metater.itch.io/astro-blast" class="font-bold hover:underline">
-            View Project →
-          </a>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Astro Blast
+              </h3>
+              <p class="mb-4">
+                Brief description of the project, what problem it solves,
+                and what technology you used.
+              </p>
+              <a href="https://metater.itch.io/astro-blast" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-48 relative group">
+              <div class="carousel" data-carousel="astro">
+                <img src="astro1.png" alt="Astro Blast 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="astro2.png" alt="Astro Blast 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="astro3.png" alt="Astro Blast 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="astro4.png" alt="Astro Blast 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('astro', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('astro', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="astro" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="astro" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="astro" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="astro" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- PROJECT CARD 10 -->
+
+        <!-- PROJECT CARD 10 - Trick or Truth -->
         <div class="border rounded-lg p-6 bg-gray-50">
-          <h3 class="text-xl font-bold mb-2">
-            Trick or Truth
-          </h3>
-          <p class="mb-4">
-            Another project description goes here.
-          </p>
-          <a href="https://metater.itch.io/trick-or-truth" class="font-bold hover:underline">
-            View Project →
-          </a>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Trick or Truth
+              </h3>
+              <p class="mb-4">
+                Another project description goes here.
+              </p>
+              <a href="https://metater.itch.io/trick-or-truth" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-48 relative group">
+              <div class="carousel" data-carousel="trick">
+                <img src="trick1.png" alt="Trick or Truth 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="trick2.png" alt="Trick or Truth 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="trick3.png" alt="Trick or Truth 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="trick4.png" alt="Trick or Truth 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('trick', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('trick', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trick" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trick" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trick" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trick" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -277,6 +533,42 @@
     
     // Initial call to set active link on page load
     updateActiveLink();
+
+    // Carousel functionality
+    const carouselStates = {};
+
+    function navigateCarousel(carouselId, direction) {
+      if (!carouselStates[carouselId]) {
+        carouselStates[carouselId] = 0;
+      }
+
+      const carousel = document.querySelector(`[data-carousel="${carouselId}"]`);
+      const images = carousel.querySelectorAll('.carousel-image');
+      const dots = document.querySelectorAll(`[data-carousel="${carouselId}"][data-dot]`);
+      
+      // Hide current image
+      images[carouselStates[carouselId]].classList.add('hidden');
+      dots[carouselStates[carouselId]].classList.remove('opacity-100');
+      dots[carouselStates[carouselId]].classList.add('opacity-50');
+      
+      // Update index
+      carouselStates[carouselId] = (carouselStates[carouselId] + direction + images.length) % images.length;
+      
+      // Show new image
+      images[carouselStates[carouselId]].classList.remove('hidden');
+      dots[carouselStates[carouselId]].classList.remove('opacity-50');
+      dots[carouselStates[carouselId]].classList.add('opacity-100');
+    }
+
+    // Initialize carousels
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set first dot as active for each carousel
+      const allDots = document.querySelectorAll('.carousel-dot[data-dot="0"]');
+      allDots.forEach(dot => {
+        dot.classList.remove('opacity-50');
+        dot.classList.add('opacity-100');
+      });
+    });
   </script>
 </body>
 </html>
