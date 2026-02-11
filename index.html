@@ -54,36 +54,200 @@
     </div>
   </nav>
   <!-- HERO -->
-  <section class="pt-32 pb-20">
-    <div class="max-w-6xl mx-auto px-6">
+  <section class="pt-20 pb-10">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+	  <img  src="img/ProfilePicture.png" alt="Photo of Rees" class="mx-auto w-56 md:w-72 lg:w-80 mb-4 object-cover"/>
       <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
         Rees Bendetti
       </h1>
-      <p class="text-xl max-w-3xl">
-        Short paragraph describing who you are, what you build,
-        and what kinds of roles or opportunities you're interested in.
+      <p class="text-xl max-w-4xl mx-auto leading-relaxed">
+        I’m a Computer Science graduate from Clemson University with a passion for building immersive AR and VR experiences. Through academic projects and professional internships I’ve developed interactive applications in Unity focused on creating engaging and accessible digital environments.
+	  </p>
+	  <br>
+	  <p class="text-xl max-w-4xl mx-auto leading-relaxed">
+		I strive to use my technical skills and creative problem-solving in order to bring ideas to life. I’m actively exploring opportunities in software development where I can take on meaningful challenges and continue to grow as a developer.
       </p>
     </div>
   </section>
   <!-- PROJECTS -->
   <section id="projects" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-extrabold mb-10">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-extrabold mb-10 text-center">
         Projects
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- PROJECT CARD 1 - Truck Stop N' Shop -->
+        <!-- PROJECT CARD 5 - It's Smoothie Time VR -->
         <div class="border rounded-lg p-6 bg-gray-50">
           <div class="flex gap-4">
             <div class="flex-1">
               <h3 class="text-xl font-bold mb-2">
-                Truck Stop N' Shop
+                It's Smoothie Time VR
               </h3>
               <p class="mb-4">
-                Brief description of the project, what problem it solves,
-                and what technology you used.
+                A VR experience built in Unity where players craft smoothies for customers to earn money and unlock rewards. Developed using a Meta Quest 3 headset and utilizes Meta's All-In-One SDK as well as Unity's XR Interaction Toolkit.
               </p>
-              <a href="#" class="font-bold hover:underline">
+			  <div class="flex gap-10">
+			  <a href="https://www.youtube.com/watch?v=6TOxbyVz8qE" class="font-bold hover:underline">
+				Watch Video →
+			  </a>
+			  <a href="https://vinadium.itch.io/its-smoothie-time" class="font-bold hover:underline">
+				View Project →
+			  </a>
+			  </div>
+            </div>
+            <div class="flex-shrink-0 w-52 relative group">
+              <div class="carousel" data-carousel="smoothie">
+                <img src="img/smoothie1.png" alt="Smoothie Time 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="img/smoothie2.png" alt="Smoothie Time 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="img/smoothie3.png" alt="Smoothie Time 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="img/smoothie4.png" alt="Smoothie Time 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('smoothie', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('smoothie', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 6 - Snowscapades VR -->
+        <div class="border rounded-lg p-6 bg-gray-50">
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Snowed-In VR
+              </h3>
+              <p class="mb-4">
+                A collaborative VR snow experience built in Unity as part of Clemson's VR Systems course using a Meta Quest 3S. Designed as a sandbox where users can build snow forts and throw snowballs in an immersive winter environment.
+              </p>
+              <a href="https://github.com/Vinadium/Snowed-In" class="font-bold hover:underline">
+                View Project →
+              </a>
+            </div>
+            <div class="flex-shrink-0 w-52 relative group">
+              <div class="carousel" data-carousel="snow">
+                <img src="img/snow1.png" alt="Snowscapades 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="img/snow2.png" alt="Snowscapades 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="img/snow3.png" alt="Snowscapades 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="img/snow4.png" alt="Snowscapades 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('snow', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('snow', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+		<!-- PROJECT CARD 3 - Trading Card System App -->
+        <div class="border rounded-lg p-6 bg-gray-50">
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Trading Card System App
+              </h3>
+              <p class="mb-4">
+                A virtual sports card collecting and trading app created while taking a summer course at the University of South Carolina. Collaborated as a team and focused on client-driven development
+              </p>
+			  <div class="flex gap-10">
+			  <a href="https://www.youtube.com/watch?v=348Ev9fRpDw" class="font-bold hover:underline">
+                Watch Video →
+              </a>
+              <a href="https://github.com/ReesBendetti/CardTradingProgram" class="font-bold hover:underline">
+                View Project →
+              </a>
+			  </div>
+            </div>
+            <div class="flex-shrink-0 w-52 relative group">
+              <div class="carousel" data-carousel="trading">
+                <img src="img/trading1.png" alt="Trading Card 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="img/trading2.png" alt="Trading Card 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="img/trading3.png" alt="Trading Card 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="img/trading4.png" alt="Trading Card 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('trading', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('trading', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="0"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="1"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="2"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PROJECT CARD 4 - AI Language Learning App -->
+        <div class="border rounded-lg p-6 bg-gray-50">
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                AI Language Learning App
+              </h3>
+              <p class="mb-4">
+                This app was designed for the Google Gemini API competition to generate personalized stories and questions for a user to help them study a new language. Has different difficulty preferences and can evaulate the user's answers for correctness.
+              </p>
+			  <div class="flex gap-10">
+			  <a href="https://www.youtube.com/watch?v=aCN26JQ4Dyk" class="font-bold hover:underline">
+                Watch Video →
+              </a>
+			  <div class="mb-1"></div>
+              <a href="https://github.com/JasonOVHolt/Gemini-API-Project" class="font-bold hover:underline">
+                View Project →
+              </a>
+			  </div>
+            </div>
+            <div class="flex-shrink-0 w-52 relative group">
+              <div class="carousel" data-carousel="language">
+                <img src="img/language1.png" alt="Language App 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
+                <img src="img/language2.png" alt="Language App 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
+                <img src="img/language3.png" alt="Language App 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
+                <img src="img/language4.png" alt="Language App 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
+              </div>
+              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('language', -1)">
+                ‹
+              </button>
+              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('language', 1)">
+                ›
+              </button>
+              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="img/carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="0"></span>
+                <span class="img/carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="1"></span>
+                <span class="img/carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="2"></span>
+                <span class="img/carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+		<!-- PROJECT CARD 1 - Truck Stop N' Shop -->
+        <div class="border rounded-lg p-6 bg-gray-50">
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">
+                Truck Stop N Shop
+              </h3>
+              <p class="mb-4">
+                A full-stack web application developed as a Senior Design project using React, Node.js, AWS and REST APIs designed for trucking companies to incentivize performance. Included admin tools, user management, audit logs and a shop.
+              </p>
+              <a href="https://github.com/Vinadium/TruckStopNShop" class="font-bold hover:underline">
                 View Project →
               </a>
             </div>
@@ -118,11 +282,16 @@
                 Global CFO Council
               </h3>
               <p class="mb-4">
-                Another project description goes here.
+                Assisted in website redesign efforts and digital content production in the effort to scale outreach. Contributed to modernizing the organization’s web presence and supported cross-platform engagement initiatives.
               </p>
+			  <div class="flex gap-10">
+			  <a href="https://www.youtube.com/watch?v=cpogQwRebOE" class="font-bold hover:underline">
+                Watch Video →
+              </a>
               <a href="https://www.globalcfocouncil.com" class="font-bold hover:underline">
                 View Project →
               </a>
+			  </div>
             </div>
             <div class="flex-shrink-0 w-52 relative group">
               <div class="carousel" data-carousel="cfo">
@@ -146,168 +315,6 @@
             </div>
           </div>
         </div>
-
-        <!-- PROJECT CARD 3 - Trading Card System App -->
-        <div class="border rounded-lg p-6 bg-gray-50">
-          <div class="flex gap-4">
-            <div class="flex-1">
-              <h3 class="text-xl font-bold mb-2">
-                Trading Card System App
-              </h3>
-              <p class="mb-4">
-                Another project description goes here.
-              </p>
-			  <a href="https://www.youtube.com/watch?v=348Ev9fRpDw" class="font-bold hover:underline">
-                Watch Video →
-              </a>
-			  <div class="mb-1"></div>
-              <a href="https://github.com/ReesBendetti/CardTradingProgram" class="font-bold hover:underline">
-                View Project →
-              </a>
-            </div>
-            <div class="flex-shrink-0 w-52 relative group">
-              <div class="carousel" data-carousel="trading">
-                <img src="img/trading1.png" alt="Trading Card 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
-                <img src="img/trading2.png" alt="Trading Card 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
-                <img src="img/trading3.png" alt="Trading Card 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
-                <img src="img/trading4.png" alt="Trading Card 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
-              </div>
-              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('trading', -1)">
-                ‹
-              </button>
-              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('trading', 1)">
-                ›
-              </button>
-              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="0"></span>
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="1"></span>
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="2"></span>
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="trading" data-dot="3"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT CARD 4 - AI Language Learning App -->
-        <div class="border rounded-lg p-6 bg-gray-50">
-          <div class="flex gap-4">
-            <div class="flex-1">
-              <h3 class="text-xl font-bold mb-2">
-                AI Language Learning App
-              </h3>
-              <p class="mb-4">
-                Another project description goes here.
-              </p>
-			  <a href="https://www.youtube.com/watch?v=aCN26JQ4Dyk" class="font-bold hover:underline">
-                Watch Video →
-              </a>
-			  <div class="mb-1"></div>
-              <a href="https://github.com/JasonOVHolt/Gemini-API-Project" class="font-bold hover:underline">
-                View Project →
-              </a>
-            </div>
-            <div class="flex-shrink-0 w-52 relative group">
-              <div class="carousel" data-carousel="language">
-                <img src="img/language1.png" alt="Language App 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
-                <img src="img/language2.png" alt="Language App 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
-                <img src="img/language3.png" alt="Language App 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
-                <img src="img/language4.png" alt="Language App 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
-              </div>
-              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('language', -1)">
-                ‹
-              </button>
-              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('language', 1)">
-                ›
-              </button>
-              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="img/carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="0"></span>
-                <span class="img/carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="1"></span>
-                <span class="img/carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="2"></span>
-                <span class="img/carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="language" data-dot="3"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT CARD 5 - It's Smoothie Time VR -->
-        <div class="border rounded-lg p-6 bg-gray-50">
-          <div class="flex gap-4">
-            <div class="flex-1">
-              <h3 class="text-xl font-bold mb-2">
-                It's Smoothie Time VR
-              </h3>
-              <p class="mb-4">
-                Brief description of the project, what problem it solves,
-                and what technology you used.
-              </p>
-			  <a href="https://www.youtube.com/watch?v=6TOxbyVz8qE" class="font-bold hover:underline">
-				Watch Video →
-			  </a>
-			  <div class="mb-1"></div>
-			  <a href="https://vinadium.itch.io/its-smoothie-time" class="font-bold hover:underline">
-				View Project →
-			  </a>
-            </div>
-            <div class="flex-shrink-0 w-52 relative group">
-              <div class="carousel" data-carousel="smoothie">
-                <img src="img/smoothie1.png" alt="Smoothie Time 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
-                <img src="img/smoothie2.png" alt="Smoothie Time 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
-                <img src="img/smoothie3.png" alt="Smoothie Time 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
-                <img src="img/smoothie4.png" alt="Smoothie Time 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
-              </div>
-              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('smoothie', -1)">
-                ‹
-              </button>
-              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('smoothie', 1)">
-                ›
-              </button>
-              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="0"></span>
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="1"></span>
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="2"></span>
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="smoothie" data-dot="3"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT CARD 6 - Snowscapades VR -->
-        <div class="border rounded-lg p-6 bg-gray-50">
-          <div class="flex gap-4">
-            <div class="flex-1">
-              <h3 class="text-xl font-bold mb-2">
-                Snowscapades VR
-              </h3>
-              <p class="mb-4">
-                Another project description goes here.
-              </p>
-              <a href="#" class="font-bold hover:underline">
-                View Project →
-              </a>
-            </div>
-            <div class="flex-shrink-0 w-52 relative group">
-              <div class="carousel" data-carousel="snow">
-                <img src="img/snow1.png" alt="Snowscapades 1" class="carousel-image w-full h-48 object-cover rounded" data-index="0">
-                <img src="img/snow2.png" alt="Snowscapades 2" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="1">
-                <img src="img/snow3.png" alt="Snowscapades 3" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="2">
-                <img src="img/snow4.png" alt="Snowscapades 4" class="carousel-image w-full h-48 object-cover rounded hidden" data-index="3">
-              </div>
-              <button class="carousel-button absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('snow', -1)">
-                ‹
-              </button>
-              <button class="carousel-button absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-full flex items-center justify-center text-gray-300 font-bold" onclick="navigateCarousel('snow', 1)">
-                ›
-              </button>
-              <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="0"></span>
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="1"></span>
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="2"></span>
-                <span class="carousel-dot w-2 h-2 rounded-full bg-white opacity-50" data-carousel="snow" data-dot="3"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- PROJECT CARD 7 - Shadow Knight -->
         <div class="border rounded-lg p-6 bg-gray-50">
           <div class="flex gap-4">
@@ -316,16 +323,16 @@
                 Shadow Knight
               </h3>
               <p class="mb-4">
-                Brief description of the project, what problem it solves,
-                and what technology you used.
+                A 3D platformer built in Unity where players parkour through a castle to rescue their companion. Developed for Clemson's 3D Game Programming course and utilizes Cinemachine, particle systems and movement mechanics.
               </p>
+			  <div class="flex gap-10">
 			  <a href="https://www.youtube.com/watch?v=B2MCCdm9xfc" class="font-bold hover:underline">
                 Watch Video →
               </a>
-			  <div class="mb-1"></div>
               <a href="https://vinadium.itch.io/shadow-knight" class="font-bold hover:underline">
                 View Project →
               </a>
+			  </div>
             </div>
             <div class="flex-shrink-0 w-52 relative group">
               <div class="carousel" data-carousel="shadow">
@@ -358,15 +365,16 @@
                 Super Screeny
               </h3>
               <p class="mb-4">
-                Another project description goes here.
+                A 2D platformer built in Pygame for a 2D Game Engine Construction course at Clemson. Designed around a constraint-based challenge where players can choose to complete the level without traditional jumping mechanics.
               </p>
+			  <div class="flex gap-10">
 			  <a href="https://drive.google.com/file/d/1eHk3eGpnMNrDtiE3nqhMuTlcOWUcaiP-/view?usp=sharing" class="font-bold hover:underline">
                 Watch Video →
               </a>
-			  <div class="mb-1"></div>
               <a href="https://sites.google.com/g.clemson.edu/2dgame/home" class="font-bold hover:underline">
                 View Project →
               </a>
+			  </div>
             </div>
             <div class="flex-shrink-0 w-52 relative group">
               <div class="carousel" data-carousel="screeny">
@@ -399,8 +407,7 @@
                 Astro Blast
               </h3>
               <p class="mb-4">
-                Brief description of the project, what problem it solves,
-                and what technology you used.
+                A fast-paced space survival game created as a team in Unity for the Brackeys Game Jam 2021. Players dodge meteors and rogue alien ships while escaping the pull of a growing black hole.
               </p>
               <a href="https://metater.itch.io/astro-blast" class="font-bold hover:underline">
                 View Project →
@@ -437,7 +444,7 @@
                 Trick or Truth
               </h3>
               <p class="mb-4">
-                Another project description goes here.
+                A Halloween-themed Unity game built for the Spooktober Game Jam, where players wear different masks to collect candy without being recognized. Designed around the “Mask the Truth” theme with stealth  and speed in mind.
               </p>
               <a href="https://metater.itch.io/trick-or-truth" class="font-bold hover:underline">
                 View Project →
@@ -470,32 +477,36 @@
   </section>
   <!-- ABOUT -->
   <section id="about" class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-extrabold mb-6">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-extrabold mb-6">
         About
       </h2>
       <p class="max-w-3xl">
+	  <center>
         More detailed information about yourself, your background,
         skills, experience, and what drives you as a developer.
+	  </center>
       </p>
     </div>
   </section>
   <!-- EXTRAS -->
   <section id="extras" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-extrabold mb-6">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-extrabold mb-6">
         Extras
       </h2>
       <p class="max-w-3xl">
+	  <center>
         Optional section for writing, talks, experiments,
         side interests, or anything else you want to share.
+	  </center>
       </p>
     </div>
   </section>
   <!-- CONTACT -->
   <section id="contact" class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-extrabold mb-6">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-extrabold mb-6">
         Contact
       </h2>
       <p class="mb-2">
